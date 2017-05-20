@@ -125,10 +125,16 @@
         opGpiUamkkSOrsvURCNTE41MTTQylSRJkn+4ewHwDt4wvI9DjQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="playersMs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="userControlPn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="leagueMs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>142, 17</value>
-  </metadata>
+  <data name="playersBt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAGYktHRAAAAAAAAPlDu38AAAAJdnBBZwAAABgAAAAYAHhMpaYAAACiSURBVEhL7ZGxDQIxDEVT
+        IG4CtmAoRmCLEztQUDIRG3AD0FDCf9H5hKwoTpMCuCc9KfK3kyhJK//LVp7kfZY1NSPKQ0b5clIzojxk
+        kn4DakaUh3Q/oPsTdf/k72UnD/Iqb/Ixy5oaGT3GUdbyhUHyjk/pP89LD73MwFnW8sxFfja1yAzsZS3P
+        tNzcywxsZC3PlBpaNEoZLpTCFo1Shiu/T0pvWYGe2fVZi0QAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
