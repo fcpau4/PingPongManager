@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace PingPongManager
 {
-    class Player
+    public class Player
     {
         public String id { get; set; }
         public String name { get; set; }
@@ -21,6 +21,8 @@ namespace PingPongManager
         {
 
         }
+
+      
 
         public Player(String photo, String name, String surname, String email)
         {

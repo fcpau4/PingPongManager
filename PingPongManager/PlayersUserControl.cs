@@ -9,7 +9,7 @@ namespace PingPongManager
 {
     public partial class playerUc : UserControl
     {
-        List<Player> playersList;
+        public List<Player> playersList;
         private String photoPath;
 
         public playerUc()
@@ -21,7 +21,7 @@ namespace PingPongManager
 
 
         //This method is in charge of saving players asynchronously.
-        private async void OnSavePbClick(object sender, EventArgs e)
+        public async void OnSavePbClick(object sender, EventArgs e)
         {
             String name = nameTb.Text;
             String surname = surnameTb.Text;
@@ -40,7 +40,7 @@ namespace PingPongManager
 
 
         //This method allows to load the image inside the picture box.
-        private void OnPlayerImage(object sender, EventArgs e)
+        public void OnPlayerImage(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "JPG|*.jpg|PNG|*.png";
@@ -54,7 +54,7 @@ namespace PingPongManager
 
 
         //This method allows to remove text in Text Boxes in one click.
-        private void restartPb_Click(object sender, EventArgs e)
+        public void restartPb_Click(object sender, EventArgs e)
         {
             nameTb.Text = "";
             surnameTb.Text = "";
@@ -66,13 +66,11 @@ namespace PingPongManager
         /* This Event is launched so that if user clicks on the update tab control, 
          * it's going to load a list of the current players.
          */
-
-        private async void OnTabClicked(object sender, EventArgs e)
+        public async void OnTabClicked(object sender, EventArgs e)
         {
 
             playersLv.Rows.Clear();
             
-         
             Bitmap img;
             TabControl tc = (TabControl)sender;
             int count = 0;
@@ -97,11 +95,11 @@ namespace PingPongManager
                         .Child("players")
                         .OnceAsync<Player>();
 
-
                     foreach (var p in players)
                     {
                         if (count < players.Count)
                         {
+                            Console.WriteLine(p.Object.photo);
                             img = new Bitmap(@p.Object.photo);
 
                             playersLv.Rows.Add();
@@ -113,7 +111,6 @@ namespace PingPongManager
                             playersList.Add(p.Object);
                             count++;
                         }
-                        Console.WriteLine(p.Object.ToString());
 
                     }
                 
@@ -134,7 +131,7 @@ namespace PingPongManager
 
     
 
-        private void setDataGridViewProps()
+        public void setDataGridViewProps()
         {
             playersLv.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
             playersLv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
@@ -144,7 +141,7 @@ namespace PingPongManager
 
 
         //When a Cell is selected...
-        private void playersLv_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void playersLv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
 
